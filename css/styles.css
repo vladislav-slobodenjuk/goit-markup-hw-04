@@ -53,6 +53,8 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .visually-hidden {
@@ -166,11 +168,35 @@ body {
 .tel-link {
   color: var(--text-color);
 }
+
+/* .header-contacts-item {
+}
+
+.mail-link::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background-image: url('../images/envelope.svg');
+  margin-right: 10px;
+}
+
+.mail-link::before:hover {
+  fill: var(--brand-color);
+} */
+
 /* ========= END HEADER =========*/
 
 /* ========= HERO =========*/
 .hero {
   background-color: var(--hero-background);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero/hero-bg.jpg');
+  /* background-repeat: no-repeat;
+  background-position: center; */
+  background-size: cover;
+  /* max-width: 1600px;
+  margin: 0 auto; */
   padding: 200px 0;
 }
 
