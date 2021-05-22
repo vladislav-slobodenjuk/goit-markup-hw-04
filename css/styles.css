@@ -247,6 +247,10 @@ body {
   width: 270px;
 }
 
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features-icon-block {
   display: flex;
   align-items: center;
@@ -255,10 +259,6 @@ body {
   height: 120px;
   background-color: #f5f4fa;
   margin-bottom: 30px;
-}
-
-.features-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .features-list-item-title {
