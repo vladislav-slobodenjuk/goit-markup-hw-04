@@ -13,6 +13,7 @@
   --header-border: #ececec;
   --project-border: #eeeeee;
   --icon-color: #afb1b8;
+  --icon-footer-bg: rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -411,8 +412,17 @@ body {
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
+}
+
+.address-block {
+  display: flex;
   flex-direction: column;
+  margin-right: 70px;
+}
+
+.address {
+  font-style: normal;
 }
 
 .footer .logo-link {
@@ -429,10 +439,6 @@ body {
   margin-bottom: 8px;
 }
 
-.address {
-  font-style: normal;
-}
-
 .contact-list-link {
   color: var(--text-secondary-color);
 }
@@ -446,6 +452,41 @@ body {
 .contact-list-link:focus {
   color: var(--brand-color);
 }
+
+.footer-social-title {
+  margin-bottom: 20px;
+  color: var(--text-secondary-color);
+}
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--text-secondary-color);
+  background-color: var(--icon-footer-bg);
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--brand-color);
+}
+
 /* ========= END FOOTER =========*/
 
 /* ========= PORTFOLIO =========*/
