@@ -12,6 +12,7 @@
   --address-secondary-color: rgba(255, 255, 255, 0.6);
   --header-border: #ececec;
   --project-border: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 h1,
@@ -329,6 +330,42 @@ body {
   line-height: inherit;
   margin-bottom: 10px;
 }
+
+.position {
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-color);
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--brand-color);
+  color: var(--text-secondary-color);
+}
+
 /* ========= END OUR TEAM  =========*/
 
 /* ========= FOOTER =========*/
