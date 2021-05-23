@@ -7,7 +7,8 @@
   --text-secondary-color: #ffffff;
   --mdl-btn-hover-bckgrnd: #188ce8;
   --title-color: #212121;
-  --hero-background: #2f303a;
+  --hero-background: rgba(47, 48, 58, 0.4);
+  --footer-background: #2f303a;
   --secondary-background: #f5f4fa;
   --address-secondary-color: rgba(255, 255, 255, 0.6);
   --header-border: #ececec;
@@ -57,6 +58,7 @@ img {
   padding-bottom: 94px;
 }
 
+/* For Hidden Section Title */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -79,7 +81,7 @@ body {
   color: var(--text-color);
 }
 
-/* ========= COMPONENTS =========*/
+/* ========= COMPONENTS ======================================*/
 .logo-link {
   font-family: var(--logo-font);
   font-weight: 700;
@@ -109,9 +111,10 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-/* ========= END COMPONENTS =========*/
 
-/* ========= HEADER =========*/
+/* ========= END COMPONENTS =================================*/
+
+/* ========= HEADER =========================================*/
 .header {
   padding: 24px 0;
   background-color: var(--text-secondary-color);
@@ -160,9 +163,9 @@ body {
   align-items: center;
 }
 
-.header-icon {
-  margin-right: 10px;
-  fill: currentColor;
+.mail-link,
+.tel-link {
+  color: var(--text-color);
 }
 
 .header-link:hover,
@@ -174,20 +177,20 @@ body {
   color: var(--brand-color);
 }
 
-.mail-link,
-.tel-link {
-  color: var(--text-color);
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
-/* ========= END HEADER =========*/
+/* ========= END HEADER ======================================*/
 
-/* ========= HERO =========*/
+/* ========= HERO ============================================*/
 .hero {
   background-color: var(--hero-background);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/hero-bg.jpg');
-  /* background-repeat: no-repeat;
-  background-position: center; */
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   max-width: 1600px;
   min-height: 600px;
@@ -236,9 +239,9 @@ body {
   background-color: var(--mdl-btn-hover-bckgrnd);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-/* ========= END HERO =========*/
+/* ========= END HERO ====================================*/
 
-/* ========= FEATURES =========*/
+/* ========= FEATURES ===================================*/
 .features-list {
   display: flex;
   align-items: center;
@@ -259,6 +262,7 @@ body {
   /* width: 270px; */
   height: 120px;
   background-color: var(--secondary-background);
+  border-radius: 4px;
   margin-bottom: 30px;
 }
 
@@ -266,9 +270,14 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-/* ========= END FEATURES =========*/
 
-/* ========= WHAT WE DO =========*/
+.features-list-item-desc {
+  line-height: 1.7;
+}
+
+/* ========= END FEATURES =================================*/
+
+/* ========= WHAT WE DO ===================================*/
 .what-we-do {
   padding-top: 0;
 }
@@ -286,9 +295,9 @@ body {
   flex-basis: calc((100% - 90px) / 3);
 }
 
-/* ========= END WHAT WE DO =========*/
+/* ========= END WHAT WE DO =================================*/
 
-/* ========= OUR TEAM =========*/
+/* ========= OUR TEAM ========================================*/
 .team {
   background-color: var(--secondary-background);
 }
@@ -309,10 +318,10 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-container {
+.team-member-container {
   background-color: var(--text-secondary-color);
   border-radius: 0px 0px 4px 4px;
-  padding: 30px 0;
+  padding: 30px 32px;
   text-align: center;
 }
 
@@ -336,7 +345,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 32px;
 }
 
 .team-social-item:not(:last-child) {
@@ -363,9 +371,9 @@ body {
   color: var(--text-secondary-color);
 }
 
-/* ========= END OUR TEAM =========*/
+/* ========= END OUR TEAM ===================================*/
 
-/* ========= REGULAR CUSTOMERS =========*/
+/* ========= REGULAR CUSTOMERS ===============================*/
 
 .customer-list {
   display: flex;
@@ -402,12 +410,12 @@ body {
   border: 1px solid var(--brand-color);
 }
 
-/* ========= END REGULAR CUSTOMERS =========*/
+/* ========= END REGULAR CUSTOMERS ============================*/
 
-/* ========= FOOTER =========*/
+/* ========= FOOTER =========================================*/
 .footer {
   padding: 60px 0;
-  background-color: var(--hero-background);
+  background-color: var(--footer-background);
 }
 
 .footer-container {
@@ -487,9 +495,9 @@ body {
   background-color: var(--brand-color);
 }
 
-/* ========= END FOOTER =========*/
+/* ========= END FOOTER =====================================*/
 
-/* ========= PORTFOLIO =========*/
+/* ========= PORTFOLIO =======================================*/
 .portfolio {
   font-size: 16px;
   line-height: 1.88;
@@ -543,14 +551,15 @@ body {
   flex-basis: calc((100% - 90px) / 3);
 }
 
-.project-list-item:hover,
-.project-list-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.project-list-link {
+  display: block;
+  color: inherit;
 }
 
-.project-list-link {
-  color: inherit;
+.project-list-link:hover,
+.project-list-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-info-container {
@@ -566,4 +575,4 @@ body {
   margin-bottom: 4px;
 }
 
-/* ========= END PORTFOLIO =========*/
+/* ========= END PORTFOLIO ==================================*/
